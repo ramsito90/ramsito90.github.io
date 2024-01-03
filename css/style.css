@@ -18,15 +18,20 @@
 -------------------------------------------------------------------*/
 
 body {
-    color: #666666;
-    font-size: 15px;
-    font-family: 'Barlow', sans-serif;
+    /*color: #666666;*/
+    color: rgb(178, 167, 150);
+    background-color: rgb(28, 29, 29);
+    font-size: 1rem;
+    font-family: Montserrat,sans-serif;
     line-height: 1.80857;
 }
 
 
 a {
-    color: #1f1f1f;
+    /*color: #1f1f1f;*/
+    /*color: rgb(178, 167, 150);*/
+    /*color: #dd666c;*/
+    color: rgb(250, 152, 79);
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
@@ -82,7 +87,9 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #212121;
+    /*color: #212121;*/
+    /*color: #dd666c;*/
+    color: rgb(250, 152, 79);
     text-decoration: none!important;
     opacity: 1
 }
@@ -97,7 +104,9 @@ h6 a:hover {
 }
 
 a {
-    color: #1f1f1f;
+    /*color: #1f1f1f;*/
+    /*color: #dd666c;*/
+    color: rgb(250, 152, 79);
     text-decoration: none;
     outline: none;
 }
@@ -160,7 +169,7 @@ button:focus{
     right: 0;
     bottom: 0;
     left: 0;
-    background: #dd666c;
+    background: rgb(25, 45, 49);
     z-index: 11000;
     position: fixed;
     display: block;
@@ -280,6 +289,7 @@ button:focus{
 
 .top-header .navbar{
 	padding: 15px 0px;
+    background-color: rgb(25, 45, 49) !important;
 }
 
 .top-header .navbar .navbar-collapse ul li a{
@@ -289,12 +299,13 @@ button:focus{
 }
 
 .top-header .navbar .navbar-collapse ul li a.active{
-	background: #dd666c;
+	/*background: #dd666c;*/
+    background: rgb(250, 152, 79);
 	color: #ffffff;
 }
 
 .top-header .navbar .navbar-collapse ul li a:hover{
-	background: #63c7bd;
+	/*background: #63c7bd;*/
 	color: #ffffff;
 }
 
@@ -309,7 +320,9 @@ button:focus{
 	animation-fill-mode: both;
 	-webkit-animation-name: fadeInDown;
 	animation-name: fadeInDown;
-	background: #fff;
+	/*background: #fff;*/
+    /*background-color: rgb(28, 29, 29);*/
+    background-color: rgb(25, 45, 49) !important;
 	z-index: 20;
 }
 
@@ -389,6 +402,7 @@ button:focus{
 }
 
 .lbox-details h1{
+    margin-top: -20px;
 	font-size: 68px;
 	font-family: 'Marck Script', cursive;
 	color: #ffffff;
@@ -408,12 +422,15 @@ button:focus{
 	z-index: 3;
 }
 .lbox-details p strong{
-	color: #dd666c;
+	/*color: #dd666c;*/
+	color: rgb(250, 152, 79);
 	font-size: 40px;
 	font-family: 'Marck Script', cursive;
 }
-.lbox-details a.btn{
-	background: #63c7bd;
+/*.lbox-details */
+a.btn{
+	/*background: rgb(250, 152, 79);*/
+    border-color: rgb(165, 86, 29);
 	padding: 10px 20px;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -422,8 +439,9 @@ button:focus{
 	position: relative;
 	z-index: 3;
 }
-.lbox-details a.btn:hover{
-	background: #dd666c;
+/*.lbox-details */
+a.btn:hover{
+    background: rgb(250, 152, 79);
 }
 
 /*------------------------------------------------------------------
@@ -441,7 +459,8 @@ button:focus{
 .title-box h2{
 	font-size: 60px;
 	font-family: 'Marck Script', cursive;
-	color: #222222;
+	/*color: #222222;*/
+    color: rgb(237, 230, 218);
 }
 .title-box h2 span{
 	color: #dd666c;
@@ -489,15 +508,44 @@ button:focus{
     flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse;
 }
-.main-timeline-box .separline::before {
-    top: 20px;
-    bottom: 0;
-    position: absolute;
-    content: "";
-    width: 2px;
-    background-color: #f1f1f1;
-    left: calc(50% - 1px);
-    height: calc(100% + 4rem);
+
+@media (min-width: 768px) {
+    .main-timeline-box .separline::before {
+        /*top: 20px;*/
+        bottom: 0;
+        position: absolute;
+        content: "";
+        /*width: 2px;*/
+        /*background-color: #f1f1f1;*/
+        /*left: calc(50% - 1px);*/
+        /*height: calc(100% + 4rem);*/
+        width: 30px;
+        height: 30px;
+        top: calc(50% - 12px);
+        left: calc(50% - 16px);
+        background-image: none;
+        border: 2px solid #e47a2e;
+        border-top-color: rgb(228, 122, 46);
+        border-right-color: rgb(228, 122, 46);
+        border-bottom-color: rgb(228, 122, 46);
+        border-left-color: rgb(228, 122, 46);
+        transform: rotate(45deg);
+        z-index: 1;
+        background-color: rgb(28, 29, 29);
+        background-image: none;
+        border-color: rgb(165, 86, 29);
+    }
+
+    .main-timeline-box .separline::after {
+        content: "\f004";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        position: absolute;
+        top: calc(50% - 10px);
+        left: calc(50% - 8px);
+        color: #e47a2e;
+        z-index: 2;
+    }
 }
 
 .main-timeline-box .iconBackground {
@@ -516,7 +564,8 @@ button:focus{
 }
 .main-timeline-box .timeline-text-content {
     padding: 30px 35px;
-	background: #f1f1f1;
+	background:  rgb(25, 45, 49);
+    min-height: 200px;
 }
 .main-timeline-box .reverse .timeline-text-content{
 	margin-right: 30px;
@@ -524,10 +573,12 @@ button:focus{
 .main-timeline-box .reverse .time-line-date-content p {
     float: left;
 	padding: 30px 35px;
-	background: #f1f1f1;
+	background:  rgb(25, 45, 49);
+    min-height: 200px;
 }
 .main-timeline-box .reverse .time-line-date-content {
 	margin-right: 30px;
+    margin-left: 30px;
 }
 
 .display-font{
@@ -541,18 +592,19 @@ button:focus{
 .main-timeline-box .time-line-date-content p {
     float: right;
 	padding: 30px 35px;
-	background: #f1f1f1;
+	background:  rgb(25, 45, 49);
 }
 .main-timeline-box .time-line-date-content {
 	margin-right: 30px;
 }
 
 .main-timeline-box .time-line-date-content .mbr-timeline-date{
-	background: #dd666c;
+	background: rgb(25, 45, 49);
 	color: #ffffff;
+    min-height: 200px;
 }
 .main-timeline-box .reverse .time-line-date-content .mbr-timeline-date{
-	background: #63c7bd;
+	background: rgb(25, 45, 49);
 	color: #ffffff;
 }
 
@@ -672,25 +724,35 @@ button:focus{
 	padding: 70px 0px;
 }
 .event-inner{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 	margin-bottom: 30px;
-	border: 10px solid #fff;
+	border: 1px solid #fff;
 	box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    background: rgb(25, 45, 49);
+    color: white;
+    min-height: 650px;
+}
+.event-inner h2 {
+    color: #e47a2e;
 }
 .event-img{
 	margin-bottom: 15px;
 }
 
-.event-inner a{
-	background: #dd666c;
-	color: #ffffff;
-	padding: 5px 10px;
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 500;
-}
-.event-inner a:hover{
-	background: #63c7bd;
-}
+/*.event-inner a{*/
+/*	background: #dd666c;*/
+/*	color: #ffffff;*/
+/*	padding: 5px 10px;*/
+/*	display: inline-block;*/
+/*	font-size: 18px;*/
+/*	font-weight: 500;*/
+/*}*/
+/*.event-inner a:hover{*/
+/*    color: white;*/
+/*	!*background: #63c7bd;*!*/
+/*}*/
 
 /*------------------------------------------------------------------
     Contact
@@ -775,47 +837,10 @@ select.form-control:not([size]):not([multiple]){
 	color: #dd666c;
 }
 .footer-box .footer-company-name a:hover{
-	color: #63c7bd;
+    color: white;
+	/*color: #63c7bd;*/
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.p-5 {
+    background-color: rgb(25, 45, 49) !important;
+}
